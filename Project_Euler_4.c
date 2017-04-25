@@ -15,7 +15,9 @@ long main()	{
 		for (j=100;j<=max;j++)	{
 			int result=i*j;
 			if (palinCheck(result))	{
-				palindrome=result;
+				if(result>palindrome)	{
+					palindrome=result;
+				}
 			}
 		}
 	}
