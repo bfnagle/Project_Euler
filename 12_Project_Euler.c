@@ -38,14 +38,14 @@ long main()	{
 int calcDivisors(triangle)	{
 	int tally=0;
 	int i;
-	for (i=1;(double)i<=sqrt((double)triangle);i++)	{
+	double sqrtTri=sqrt((double)triangle);
+	for (i=1;(double)i<=sqrtTri;i++)	{
 		if (triangle%i==0)	{
-			if(sqrt((double)triangle)==0)	{
-				tally++;
-			} else	{
-				tally+=2;
-			}
+			tally+=2;
 		}
+	}
+	if (sqrtTri==0)	{
+		tally--;
 	}
 	return tally;
 }
